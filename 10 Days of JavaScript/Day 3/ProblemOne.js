@@ -5,7 +5,17 @@
  **/
 function getSecondLargest(nums) {
   // Complete the function
-  nums.sort(function (a, b) {
-    return a - b;
-  });
+  let largest = 0;
+  let secondLargest = 0;
+
+  nums = nums.sort((a, b) => a - b);
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > largest) {
+      secondLargest = largest;
+      largest = nums[i];
+    }
+  }
+
+  return secondLargest;
 }
