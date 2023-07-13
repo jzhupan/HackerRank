@@ -95,7 +95,7 @@ function gradingStudents(grades) {
     function findNextMultipleOfFive(grade){
         let isItMultipleOfFive = false;
         let nextNumber = grade;
-        while(!isItMultipleOfFive || nextNumber === 100){
+        while(!isItMultipleOfFive){
             nextNumber++;
             if(nextNumber % 5 == 0){
                 isItMultipleOfFive = true;
