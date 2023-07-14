@@ -99,33 +99,32 @@ function readLine() {
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
     // Write your code here
-    let applesArray = []
-    let orangesArray = []
-    let appleResults = 0
-    let orangeResults = 0
-    for(let i = 0; i < apples.length; i++){
-            let applesDistances = a + apples[i]
-            applesArray.push(applesDistances)
-        }
-            for(let j = 0; j < applesArray.length; j++){
-                if(s > applesArray[j] < t){
-                    appleResults += 1
-                }
-            }
-
-            console.log(appleResults)        
-            
-    for(let k = 0; k < oranges.length; k++){
-            let orangesDistances = b + oranges[k]
-            orangesArray.push(orangesDistances)
-        }
-for(let x = 0; x < orangesArray.length; x++){
-                if(s > oranges[x] < t){
-                    orangeResults += 1
-                }
-            }
-            console.log(orangeResults)
+    let applesPosition = 0
+    let orangesPosition = 0
+    let fallenApplesResult = 0
+    let fallenOrangesResult = 0
     
+    for(let i=0; i < apples.length; i++){
+        applesPosition = apples[i] + a
+    }
+    if(s <= applesPosition <= t){
+        fallenApplesResult += 1
+        console.log(fallenApplesResult)
+    } 
+    else {
+        return fallenApplesResult
+    }
+    
+    for(let i=0; i < oranges.length; i++){
+        orangesPosition = oranges[i] + b
+    }
+    if(s <= orangesPosition <= t){
+            fallenOrangesResult += 1
+            console.log(fallenOrangesResult)
+         } 
+    else {
+            return fallenOrangesResult
+         }
 }
 
 function main() {
