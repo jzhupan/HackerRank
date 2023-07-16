@@ -99,32 +99,30 @@ function readLine() {
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
     // Write your code here
-    let applesPosition = 0
-    let orangesPosition = 0
-    let fallenApplesResult = 0
-    let fallenOrangesResult = 0
+    let applesPosition = apples.map((apple) => apple + a);
+    let orangesPosition = oranges.map((orange) => orange + b);
+    let fallenApplesResult = 0;
+    let fallenOrangesResult = 0;
     
-    for(let i=0; i < apples.length; i++){
-        applesPosition = apples[i] + a
+    for(let i=0; i < applesPosition.length; i++){
+        const fruitA = applesPosition[i]
+        //console.log(fruitA)
+        if(s <= fruitA && fruitA <= t)
+        fallenApplesResult += 1 
+        
     }
-    if(s <= applesPosition <= t){
-        fallenApplesResult += 1
         console.log(fallenApplesResult)
-    } 
-    else {
-        return fallenApplesResult
-    }
     
-    for(let i=0; i < oranges.length; i++){
-        orangesPosition = oranges[i] + b
-    }
-    if(s <= orangesPosition <= t){
+    
+    for(let i=0; i < orangesPosition.length; i++){
+        const fruitO = orangesPosition[i]
+        //console.log(fruitO)
+        if(s <= fruitO && fruitO <= t)
             fallenOrangesResult += 1
-            console.log(fallenOrangesResult)
-         } 
-    else {
-            return fallenOrangesResult
-         }
+    }
+        console.log(fallenOrangesResult)
+        
+
 }
 
 function main() {
