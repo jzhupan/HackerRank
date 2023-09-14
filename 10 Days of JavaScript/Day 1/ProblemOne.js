@@ -25,7 +25,7 @@ function readLine() {
   return inputString[currentLine++];
 }
 
-/**
+/** Arithmetic Operators
  *   Calculate the area of a rectangle.
  *
  *   length: The length of the rectangle.

@@ -25,7 +25,7 @@ function readLine() {
   return inputString[currentLine++];
 }
 
-/**
+/** Data Types
  *   The variables 'firstInteger', 'firstDecimal', and 'firstString' are declared for you -- do not modify them.
  *   Print three lines:
  *   1. The sum of 'firstInteger' and the Number representation of 'secondInteger'.

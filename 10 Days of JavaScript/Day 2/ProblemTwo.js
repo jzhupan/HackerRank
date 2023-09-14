@@ -1,3 +1,6 @@
+// Conditional Statements: Switch
+
+
 function getLetter(s) {
   let letter;
   // Write your code here
