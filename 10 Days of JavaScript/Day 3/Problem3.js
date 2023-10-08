@@ -1,5 +1,3 @@
-// Throw
-
 'use strict';
 
 process.stdin.resume();
@@ -34,9 +32,9 @@ function isPositive(a) {
     if(a > 0){
       return 'YES'
     } else if(a === 0){
-      return "Zero Error"
+      throw new Error("Zero Error")
     } else if(a < 0){
-      return "Negative Error"
+      throw new Error("Negative Error")
     }
 }
 
